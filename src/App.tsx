@@ -77,14 +77,6 @@ export const App: React.FC = () => {
   const onUpdateTodo = useCallback(async (
     changedTodo: Todo,
   ) => {
-    // setUpdatingTodos(prevIds => {
-    //   if (!prevIds.includes(changedTodo)) {
-    //     return [...prevIds, changedTodo];
-    //   }
-
-    //   return prevIds;
-    // });
-
     try {
       const { id, title, completed } = changedTodo;
       const updatedTodo = await updateTodo(id, { title, completed });
@@ -98,9 +90,6 @@ export const App: React.FC = () => {
       }));
     } catch {
       showError(ErrorMessages.UPDATE);
-    // } finally {
-    //   setUpdatingTodos(prevTodos => prevTodos
-    //     .filter(prevTodoId => prevTodoId !== changedTodo));
     }
   }, [showError]);
 
@@ -125,7 +114,7 @@ export const App: React.FC = () => {
         .then(setTodos)
         .catch(() => setIsError('Something went wrong...'));
     }
-  }, []);
+  }, [todos.length]);
 
   const filteredTodos = useMemo(() => {
     switch (filteredStatus) {

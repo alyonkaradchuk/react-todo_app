@@ -1,4 +1,7 @@
-# Base layout template with Gulp, SCSS and Stylelint
-1. Create a repo using this template
-1. Replace `<your_account>` and `<repo_name>` with your Github username and the new repo name
-    - [DEMO LINK](https://<your_account>.github.io/<repo_name>/)
+# React Todo App with API
+
+In this application you can see a todo app, where you can add, edit and delete a todo item. So, now it's easier to plan your day.
+
+Click [here](https://alyonkaradchuk.github.io/react-todo_app/) to see the demonstration.
+
+I used these technologies: `React`, `TypeScript`, `React Hooks`, `React Router`, `Fetch`, `Bulma`, `SCSS`, `NPM`.
